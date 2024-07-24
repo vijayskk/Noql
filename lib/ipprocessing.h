@@ -28,7 +28,7 @@ CommandBuffer * tokenizeCmd(InputBuffer * buff){
 
     int i = 0 , length = 0;
     while(1){
-        char temp[30];
+        char temp[30] = "";
         while(1){
             if (buff->buffer[i] == ' ' || buff->buffer[i] == '\n')
             {
