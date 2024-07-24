@@ -1,5 +1,6 @@
 #include "../lib/ipmanagement.h"
 #include "../lib/startupmgr.h"
+
 int main()
 {
     InputBuffer * buff = new_ipbuff();
@@ -8,7 +9,7 @@ int main()
     {
         print_prompt();
         read_ipbuff(buff);
-        debug_ipbuff(buff);
+        processCommand(buff);
     }
     
     return 0;
