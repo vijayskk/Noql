@@ -9,7 +9,7 @@ int main()
     {
         print_prompt();
         read_ipbuff(buff);
-        processCommand(buff);
+        processInput(buff);
     }
     
     return 0;

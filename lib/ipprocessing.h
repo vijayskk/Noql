@@ -1,6 +1,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
+#include "../lib/processcommand.h"
+
 
 typedef struct InputBuffer{
     char * buffer;
@@ -8,19 +10,8 @@ typedef struct InputBuffer{
     size_t inputlen;
 } InputBuffer;
 
-typedef struct Token{
-    char content[30];
-    size_t length;
-} Token;
 
-typedef struct CommandBuffer{
-    Token tokens[10];
-    int tokencount;
-}CommandBuffer;
 
-void handleExit(){
-    printf("bye\n");
-}
 
 CommandBuffer * tokenizeCmd(InputBuffer * buff){
     CommandBuffer * cmdBuff = (CommandBuffer *) malloc(sizeof(CommandBuffer));
@@ -54,7 +45,10 @@ CommandBuffer * tokenizeCmd(InputBuffer * buff){
         }
         i++;
     }
-    
-    
     return cmdBuff;
+}
+
+void processInput(InputBuffer * buff){
+    CommandBuffer * cmdBuff =  tokenizeCmd(buff);
+    processCommand(cmdBuff);
 }

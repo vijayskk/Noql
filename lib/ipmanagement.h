@@ -23,12 +23,3 @@ extern void debug_ipbuff(InputBuffer * buff){
 extern void print_prompt(){
     printf("\n>> ");
 }
-
-void processCommand(InputBuffer * buff){
-    CommandBuffer * cmdBuff =  tokenizeCmd(buff);
-    for (int i = 0; i < cmdBuff->tokencount; i++)
-    {
-        printf("\'%s\' ",cmdBuff->tokens[i].content);
-    }
-    
-}
