@@ -45,5 +45,7 @@ void processCommand(CommandBuffer * cmdBuff){
         }else{
             printf("ERROR: Bad Command!!!");
         }
+    }else{
+        printf("ERROR: Bad Command!!!");
     }
 }
