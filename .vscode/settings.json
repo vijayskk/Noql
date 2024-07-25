@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "ipmanagement.h": "c",
+        "ipprocessing.h": "c",
+        "processcommand.h": "c"
+    }
+}

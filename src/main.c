@@ -1,5 +1,6 @@
 #include "../lib/ipmanagement.h"
 #include "../lib/startupmgr.h"
+#include <string.h>
 
 int main()
 {

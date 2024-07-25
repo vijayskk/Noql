@@ -21,5 +21,5 @@ extern void debug_ipbuff(InputBuffer * buff){
 }
 
 extern void print_prompt(){
-    printf("\n>> ");
+    printf("\n%s> ",dbactive == 1?currentDB:"");
 }

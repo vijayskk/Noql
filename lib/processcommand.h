@@ -1,4 +1,7 @@
 #include <stdlib.h>
+#include "datamanagement.h"
+char currentDB[30];
+int dbactive = 0;
 
 typedef struct Token{
     char content[30];
@@ -34,6 +37,8 @@ void processCommand(CommandBuffer * cmdBuff){
         if (cmdBuff->tokencount == 2 && strcmp(cmdBuff->tokens[1].content,"") != 0 )
         {
             printf("DB %s is active now.",cmdBuff->tokens[1].content);
+            strcpy(currentDB,cmdBuff->tokens[1].content);
+            dbactive = 1;
         }else{
             printf("ERROR: A DB name expected!!!");
         }
